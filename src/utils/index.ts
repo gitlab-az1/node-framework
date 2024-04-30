@@ -2,6 +2,8 @@ export * from './string';
 
 export const version = '1.0.0';
 
+export const USER_AGENT = `node-framework/${version}${isBrowser() ? '' : ` (Node.JS ${process.version})`}`;
+
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
