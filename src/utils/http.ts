@@ -3,7 +3,7 @@ import IterableMap, { type IterableMapEntries } from '../iterable-map';
 
 
 
-export const enum StatusCode {
+export enum StatusCode {
   Continue = 0x64,
   SwitchingProtocols = 0x65,
   Processing = 0x66,

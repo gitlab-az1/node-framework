@@ -1,8 +1,7 @@
+export * from './http';
 export * from './string';
 
-export const version = '1.0.0';
-
-export const USER_AGENT = `node-framework/${version}${isBrowser() ? '' : ` (Node.JS ${process.version})`}`;
+export const version = '1.0.1';
 
 
 declare global {

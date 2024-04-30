@@ -1,10 +1,13 @@
 import { Exception } from '../errors';
 import { Disposable, IDisposable } from '../disposable';
 import { jsonSafeParser, jsonSafeStringify } from '../safe-json';
-import { USER_AGENT, isIterableIterator, isPlainObject } from '../utils';
+import { isBrowser, isIterableIterator, isPlainObject, version } from '../utils';
 import type { Dict, HttpMethod, MaybePromise, HttpHeaders as HeadersType } from '../types';
 import { Headers as HttpHeaders, StatusCode, httpStatusExplanation, statusCodeToString } from '../utils/http';
 
+
+
+const USER_AGENT = `node-framework/${version}${isBrowser() ? '' : ` (Node.JS ${process.version})`}`;
 
 
 export interface AbstractResponse {
